@@ -18,9 +18,7 @@ function PrivacyPage() {
   return (
     <main className="pt-16 pb-16 sm:pt-20">
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <h1 className="mb-8 font-geist text-4xl font-bold text-gray-900 sm:text-5xl">
-          Privacy Policy
-        </h1>
+        <h1 className="mb-8 font-geist text-4xl font-bold text-ink sm:text-5xl">Privacy Policy</h1>
         <div className="space-y-6 font-geist leading-relaxed text-gray-700">
           <p className="mb-8 text-sm text-gray-500">Last updated: November 16, 2026</p>
 
@@ -37,9 +35,7 @@ function PrivacyPage() {
           </PolicySection>
 
           <PolicySection title="2. Information We Collect">
-            <h3 className="mb-3 text-xl font-semibold text-gray-900">
-              2.1 Information You Provide
-            </h3>
+            <h3 className="mb-3 text-xl font-semibold text-ink">2.1 Information You Provide</h3>
             <p>We may collect information that you provide directly to us, including:</p>
             <PolicyList
               items={[
@@ -49,7 +45,7 @@ function PrivacyPage() {
                 "Information provided when you register for our services",
               ]}
             />
-            <h3 className="mt-6 mb-3 text-xl font-semibold text-gray-900">
+            <h3 className="mt-6 mb-3 text-xl font-semibold text-ink">
               2.2 Automatically Collected Information
             </h3>
             <p>
@@ -153,7 +149,7 @@ function PrivacyPage() {
 function PolicySection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section>
-      <h2 className="mb-4 text-2xl font-semibold text-gray-900">{title}</h2>
+      <h2 className="mb-4 text-2xl font-semibold text-ink">{title}</h2>
       {children}
     </section>
   );
