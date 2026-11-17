@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import { BookLink } from "@/components/BookLink";
+import { FooterWordmark } from "@/components/FooterWordmark";
 import {
   ArrowUpRightIcon,
   PhoneIcon,
@@ -22,8 +23,8 @@ const footerLink =
 
 export function SiteFooter() {
   return (
-    <footer className="w-full bg-ink">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+    <footer className="w-full overflow-hidden bg-ink">
+      <div className="mx-auto max-w-7xl px-4 pt-12 pb-4 sm:px-6 sm:pt-16 sm:pb-6">
         <div className="relative overflow-hidden p-4 text-white sm:p-6 md:p-8">
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_-20%,rgba(245,78,0,0.14),transparent_60%)]" />
@@ -38,7 +39,7 @@ export function SiteFooter() {
                 alt={site.legalName}
                 width={731}
                 height={240}
-                className="h-12 w-auto sm:h-14"
+                className="h-10 w-auto sm:h-12"
                 loading="lazy"
               />
             </Link>
@@ -142,6 +143,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
+      <FooterWordmark />
     </footer>
   );
 }

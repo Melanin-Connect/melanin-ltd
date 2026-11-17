@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { AiAgents } from "@/components/AiAgents";
+import { CountUp } from "@/components/CountUp";
 import { HeroActions } from "@/components/HeroActions";
 import { ArrowUpRightIcon } from "@/components/icons";
 import { Methodology } from "@/components/Methodology";
@@ -23,21 +24,21 @@ export const Route = createFileRoute("/services")({
 
 const caseStudies = [
   {
-    stat: "3x",
+    stat: { value: 3, suffix: "x" },
     statLabel: "ROI Increase",
     title: "E-commerce Business",
     summary: "Reduced operational costs by 30% and increased ROI by 3x in the first quarter",
     category: "ROI Optimization",
   },
   {
-    stat: "40%",
+    stat: { value: 40, suffix: "%" },
     statLabel: "More Customers",
     title: "SaaS Startup",
     summary: "Automated tools brought in 50% more customers with streamlined onboarding",
     category: "Customer Growth",
   },
   {
-    stat: "15hrs",
+    stat: { value: 15, suffix: "hrs" },
     statLabel: "Saved/Week",
     title: "Digital Agency",
     summary: "Saved 15 hours per week on manual tasks, allowing focus on client work",
@@ -102,14 +103,19 @@ function ServicesPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3">
-              {caseStudies.map((study) => (
+              {caseStudies.map((study, index) => (
                 <article
                   key={study.title}
                   className="group overflow-hidden rounded-2xl bg-linear-to-br from-gray-50 to-white transition-colors sm:rounded-3xl"
                 >
                   <div className="flex aspect-video items-center justify-center overflow-hidden bg-linear-to-br from-brand-soft to-orange-100">
                     <div className="p-4 text-center sm:p-6">
-                      <div className="text-3xl font-bold text-brand sm:text-4xl">{study.stat}</div>
+                      <CountUp
+                        value={study.stat.value}
+                        suffix={study.stat.suffix}
+                        delay={index * 150}
+                        className="block font-geist text-4xl font-bold tracking-tight text-brand sm:text-5xl"
+                      />
                       <div className="font-geist text-xs text-gray-600 sm:text-sm">
                         {study.statLabel}
                       </div>
