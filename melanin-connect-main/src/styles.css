@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-geist: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Melanin Connect brand pink and its darker gradient stop. */
+  --color-brand: #ec4899;
+  --color-brand-dark: #db2777;
+
+  --animate-character-reveal: character-reveal 0.6s ease-out both;
+  --animate-marquee-ltr: marquee-ltr 80s linear infinite;
+  --animate-marquee-rtl: marquee-rtl 80s linear infinite;
+  --animate-molecule: molecule-rotate 10s ease-in-out infinite;
+
+  @keyframes character-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee-ltr {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-rtl {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes molecule-rotate {
+    0% {
+      transform: rotate(0deg) translateY(0);
+    }
+    50% {
+      transform: rotate(180deg) translateY(-6px);
+    }
+    100% {
+      transform: rotate(360deg) translateY(0);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    color: rgb(33 53 71);
+    background-color: #fff;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html,
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #fff;
+  }
+
+  a {
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: rgb(116 123 255);
+  }
+
+  button {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: rgb(249 249 249);
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+  button:hover {
+    border-color: rgb(100 108 255);
+  }
+}
+
+@utility btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-character-reveal,
+  .animate-marquee-ltr,
+  .animate-marquee-rtl,
+  .animate-molecule {
+    animation: none;
+    opacity: 1;
+  }
+}
