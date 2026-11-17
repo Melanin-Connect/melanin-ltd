@@ -1,101 +1,108 @@
 import type { ComponentType } from "react";
 
-import {
-  ChartBarIcon,
-  CheckIcon,
-  CurrencyCircleIcon,
-  QuestionCircleIcon,
-} from "@/components/icons";
+import { BotIcon, DevicesIcon, LinkIcon, ShoppingBagIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
+import { SectionHeading } from "@/components/SectionHeading";
 
 type Service = {
   icon: ComponentType<{ className?: string }>;
   title: string;
   description: string;
-  features?: string[];
+  includes: string[];
 };
 
 const services: Service[] = [
   {
-    icon: ChartBarIcon,
-    title: "See everything in one unified dashboard",
-    description:
-      "Track sales, customer engagement, active campaigns, and business metrics—all from a single dashboard.",
-    features: ["Real-time metrics", "Campaign overview", "Customer insights"],
+    icon: BotIcon,
+    title: "AI & Automation",
+    description: "Automate repetitive work and deploy intelligent workflows.",
+    includes: [
+      "AI agents",
+      "Workflow automation",
+      "Customer-service automation",
+      "Content automation",
+      "Business intelligence",
+      "Internal knowledge systems",
+    ],
   },
   {
-    icon: QuestionCircleIcon,
-    title: "AI-powered business tools",
-    description:
-      "Leverage AI to automate content creation, customer support, and business processes. Focus on what matters most.",
+    icon: DevicesIcon,
+    title: "Digital Products",
+    description: "Turn business ideas into scalable web and mobile platforms.",
+    includes: [
+      "Web applications",
+      "Mobile applications",
+      "SaaS platforms",
+      "AI-powered platforms",
+      "Marketplaces",
+      "Customer portals",
+      "Internal business systems",
+    ],
   },
   {
-    icon: CurrencyCircleIcon,
-    title: "Secure blockchain payments",
-    description:
-      "Accept payments seamlessly with blockchain technology. Fast, secure, and transparent transactions.",
-    features: ["Instant transactions", "Low fees", "Global reach"],
+    icon: ShoppingBagIcon,
+    title: "Digital Commerce",
+    description: "Build modern commerce, payment and customer systems.",
+    includes: ["Commerce platforms", "Payment systems", "Customer systems"],
   },
   {
-    icon: ChartBarIcon,
-    title: "Track every metric and dollar",
+    icon: LinkIcon,
+    title: "Blockchain",
     description:
-      "See which campaigns drive results and calculate ROI automatically. Make data-driven decisions with confidence.",
+      "Deploy secure blockchain-based infrastructure where it provides genuine business value.",
+    includes: ["Payment infrastructure", "Secure transactions"],
   },
 ];
 
 export function ServicesOverview() {
   return (
-    <section className="bg-white pb-16 sm:pb-24" id="features">
+    <section className="bg-white py-20 sm:py-28" id="services">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-8 flex flex-col gap-6 border-b border-gray-200 pb-8 sm:mt-12 sm:flex-row sm:items-end">
-          <div className="max-w-2xl">
-            <h2 className="mb-3 text-left font-geist text-xl font-medium tracking-tight text-gray-900 sm:mb-4 sm:text-2xl md:mb-6 md:text-3xl lg:text-4xl xl:text-5xl">
-              We provide a wide range of
-              <span className="text-brand"> business services</span>
-            </h2>
-            <p className="mt-2 text-left font-geist text-sm leading-relaxed text-gray-600 sm:mt-3 sm:text-base md:mt-4 md:text-lg">
-              From AI-powered tools to blockchain payment systems, our platform provides everything
-              you need to boost your brand and streamline operations.
-            </p>
-          </div>
-        </div>
+        <SectionHeading
+          eyebrow="What we do"
+          title={
+            <>
+              We help businesses <span className="text-brand">automate operations</span>, build
+              intelligent digital products and modernise digital commerce.
+            </>
+          }
+        >
+          <p>
+            Melanin Connect is a digital technology company helping businesses use AI, automation
+            and blockchain to improve operations, digital commerce and growth.
+          </p>
+        </SectionHeading>
 
-        <div className="my-8 overflow-hidden sm:my-12">
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2">
-            {services.map(({ icon: Icon, title, description, features }) => (
-              <div
-                key={title}
-                className="group/card relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/10 sm:rounded-3xl sm:p-8 lg:p-10"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 transition-transform duration-300 group-hover/card:scale-110 sm:mb-6">
-                  <Icon className="h-6 w-6 text-brand" />
-                </div>
-                <h3 className="mb-3 font-geist text-2xl font-semibold tracking-tight text-gray-900 sm:mb-4 sm:text-3xl">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2">
+          {services.map(({ icon: Icon, title, description, includes }, index) => (
+            <Reveal key={title} delay={(index % 2) * 90} className="h-full">
+              <article className="group relative h-full overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-xl hover:shadow-brand/10 sm:p-8 lg:p-10">
+                <div
+                  className="pointer-events-none absolute -top-24 -right-24 h-48 w-48 rounded-full bg-brand/15 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                  aria-hidden="true"
+                />
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-white transition-colors duration-300 group-hover:bg-brand">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-6 font-geist text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                   {title}
                 </h3>
-                <p
-                  className={`font-geist text-base leading-relaxed text-gray-600 sm:text-lg ${features ? "mb-6 sm:mb-8" : ""}`}
-                >
+                <p className="mt-3 font-geist text-base leading-relaxed text-gray-600 sm:text-lg">
                   {description}
                 </p>
-                {features && (
-                  <ul className="space-y-3 sm:space-y-4">
-                    {features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-3 font-geist text-sm font-medium text-gray-700 sm:text-base"
-                      >
-                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/10">
-                          <CheckIcon className="h-3 w-3 text-brand" />
-                        </span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
+                <ul className="mt-6 flex flex-wrap gap-2">
+                  {includes.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 font-geist text-xs font-medium text-gray-700 sm:text-sm"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
