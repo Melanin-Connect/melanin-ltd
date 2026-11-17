@@ -1,7 +1,9 @@
 import type { ComponentType, ReactNode } from "react";
 
-import { MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
+import { BookLink } from "@/components/BookLink";
+import { CalendarIcon, MailIcon, MapPinIcon, PhoneIcon } from "@/components/icons";
 import { site } from "@/lib/site";
+import { button } from "@/lib/ui";
 
 const fieldClass =
   "w-full rounded-xl border border-gray-300 bg-white px-4 py-3 font-geist text-black placeholder-gray-400 transition-all duration-200 focus:outline-none";
@@ -14,12 +16,12 @@ export function ContactSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="mb-3 font-geist text-2xl font-medium tracking-tight text-gray-900 sm:mb-4 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
+            <h2 className="mb-3 font-geist text-2xl font-medium tracking-tight text-ink sm:mb-4 sm:text-3xl md:mb-6 md:text-4xl lg:text-5xl">
               Get In Touch
             </h2>
             <p className="mb-4 font-geist text-sm text-gray-600 sm:mb-6 sm:text-base md:mb-8 md:text-lg">
-              Have questions about how our platform can help your business? We're here to help. Fill
-              out the form or reach out directly.
+              Tell us about your business and what you want to achieve. Fill out the form, reach out
+              directly, or book a call at a time that suits you.
             </p>
             <div className="space-y-4 sm:space-y-6">
               <ContactDetail icon={MailIcon} title="Email Address">
@@ -31,6 +33,21 @@ export function ContactSection() {
               <ContactDetail icon={MapPinIcon} title="Work Hours">
                 {site.workHours}
               </ContactDetail>
+            </div>
+
+            <div className="mt-8 flex flex-col gap-4 rounded-3xl bg-ink p-6 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="font-geist text-lg font-semibold text-white">
+                  Prefer to talk it through?
+                </p>
+                <p className="mt-1 font-geist text-sm text-white/70">
+                  Pick a time and speak with our team directly.
+                </p>
+              </div>
+              <BookLink topic="consultation" className={`${button.primary} shrink-0`}>
+                <CalendarIcon className="h-4 w-4" />
+                Book a call
+              </BookLink>
             </div>
           </div>
 
@@ -114,11 +131,11 @@ function ContactDetail({
 }) {
   return (
     <div className="flex items-start gap-3 sm:gap-4">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pink-100 sm:h-12 sm:w-12">
-        <Icon className="h-4 w-4 text-pink-600 sm:h-5 sm:w-5" />
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-soft sm:h-12 sm:w-12">
+        <Icon className="h-4 w-4 text-brand sm:h-5 sm:w-5" />
       </div>
       <div>
-        <h3 className="mb-1 font-geist text-sm font-semibold text-gray-900">{title}</h3>
+        <h3 className="mb-1 font-geist text-sm font-semibold text-ink">{title}</h3>
         <p className="font-geist text-gray-600">{children}</p>
       </div>
     </div>
