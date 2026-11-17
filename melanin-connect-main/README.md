@@ -40,7 +40,7 @@ public/
 src/
   components/        Header, footer, page sections and icons
   lib/site.ts        Contact details, navigation links, image paths, page <head> helper
-  routes/            One file per page (/, /about-us, /services, /contact-us, /privacy)
+  routes/            One file per page (/, /about-us, /services, /contact-us, /privacy, /book)
   styles.css         Tailwind entry: brand tokens, animations and base styles
 ```
 
@@ -50,7 +50,18 @@ src/
 
 - **Images.** Replace a file in `public/images/` with one of the same name: `logo.png`, `hero-home.jpg`, `hero-services.jpg`, `card-1.jpg` to `card-4.jpg`.
 - **Contact details.** Email, phone, hours and address live in `src/lib/site.ts`.
-- **Brand colour.** `--color-brand` in `src/styles.css` drives every pink accent.
+- **Logo and icons.** `public/images/logo.png` (header), `logo-light.png` (footer), `mark.png` (rings). Favicons and app icons live in `public/`.
+- **Brand colours.** `--color-brand` (orange) and `--color-ink` (navy) in `src/styles.css` drive every accent.
+
+## Booking (Calendly)
+
+The `/book` page embeds Calendly inside a branded frame, in the site colours. Every "Book a call", "Start a project" and "Get an AI audit" button opens it with that topic pre-selected.
+
+1. In Calendly, copy each event's scheduling link (for example `https://calendly.com/your-team/consultation`).
+2. Paste it into `booking` in `src/lib/site.ts`: `defaultCalendlyUrl` for one shared event, or `calendlyUrl` on each topic for separate events.
+3. Until a link is set, the page shows an email and phone fallback instead.
+
+The chosen topic is passed to Calendly as `utm_campaign`, so it appears on each booking. When a booking completes, the site shows its own confirmation.
 
 ## Deploying
 
