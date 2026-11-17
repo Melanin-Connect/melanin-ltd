@@ -1,19 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { AiAgents } from "@/components/AiAgents";
 import { AnimatedHeadline } from "@/components/AnimatedHeadline";
-import { ContactSection } from "@/components/ContactSection";
 import { HeroActions } from "@/components/HeroActions";
+import { Methodology } from "@/components/Methodology";
+import { NextSteps } from "@/components/NextSteps";
+import { ProblemsSection } from "@/components/ProblemsSection";
 import { ServicesOverview } from "@/components/ServicesOverview";
-import { SolutionsShowcase } from "@/components/SolutionsShowcase";
 import { Testimonials } from "@/components/Testimonials";
+import { ValueChain } from "@/components/ValueChain";
+import { WhoWeServe } from "@/components/WhoWeServe";
 import { images, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () =>
     pageHead({
-      title: "Melanin Connect - AI and Blockchain Solutions for Business Growth",
+      title: "Melanin Connect | Build Smarter. Automate Faster. Grow Digitally.",
       description:
-        "AI-powered tools, blockchain payments, and personalized solutions for business growth.",
+        "Melanin Connect helps businesses transform operations and create scalable digital products using AI, automation and next-generation technology.",
       path: "/",
     }),
   component: HomePage,
@@ -22,43 +26,58 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <main>
-      <section className="relative z-1 min-h-screen w-full">
+      <section className="relative isolate min-h-svh w-full overflow-hidden bg-ink">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 -z-10 scale-105 animate-fade-in bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url("${images.heroHome}")` }}
           role="img"
           aria-label="Human and AI collaboration representing technology partnership"
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        />
+        <div
+          className="absolute inset-0 -z-10 bg-linear-to-b from-ink/70 via-ink/55 to-ink/85"
+          aria-hidden="true"
+        />
 
-        <div className="relative z-10 flex min-h-screen w-full items-center pt-16 sm:pt-20">
-          <div className="relative mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="flex min-h-svh w-full items-center pt-20 pb-12 sm:pt-24">
+          <div className="mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+            <p className="mx-auto mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 font-geist text-xs font-medium text-white/90 backdrop-blur sm:text-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true" />
+              AI · Automation · Digital commerce
+            </p>
             <AnimatedHeadline
-              className="mx-auto max-w-3xl px-2 font-geist text-2xl leading-tight font-medium tracking-tighter text-white sm:text-3xl sm:leading-tight md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
+              className="mx-auto max-w-5xl px-2 font-geist text-4xl leading-[1.05] font-semibold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl"
               lines={[
-                { text: "Empowering Your Business", startDelay: 0.2 },
+                { text: "Build Smarter.", startDelay: 0.2 },
+                { text: "Automate Faster.", startDelay: 0.55, className: "mt-1 sm:mt-2" },
                 {
-                  text: "With AI and Blockchain Solutions",
-                  startDelay: 0.8,
-                  className: "mt-2 text-white sm:mt-3 md:mt-4",
+                  text: "Grow Digitally.",
+                  startDelay: 0.95,
+                  className: "mt-1 text-brand sm:mt-2",
                 },
               ]}
             />
-            <p className="mx-auto mt-4 hidden max-w-3xl px-4 font-geist text-sm text-white/90 sm:mt-6 sm:block sm:text-base md:mt-8 md:text-lg lg:text-xl">
-              Unlock the future of digital commerce with AI-powered tools, seamless blockchain
-              payment systems, and personalized solutions designed to boost your brand and
-              streamline your operations.
+            <p
+              className="mx-auto mt-6 max-w-2xl animate-character-reveal px-4 font-geist text-base text-pretty text-white/85 sm:mt-8 sm:text-lg md:text-xl"
+              style={{ animationDelay: "1.4s" }}
+            >
+              Melanin Connect helps businesses transform operations and create scalable digital
+              products using AI, automation and next-generation technology.
             </p>
-            <HeroActions />
+            <div className="animate-character-reveal" style={{ animationDelay: "1.6s" }}>
+              <HeroActions />
+            </div>
           </div>
         </div>
       </section>
 
+      <ProblemsSection />
       <ServicesOverview />
-      <SolutionsShowcase />
+      <ValueChain />
+      <Methodology />
+      <AiAgents />
+      <WhoWeServe />
       <Testimonials />
-      <ContactSection />
+      <NextSteps />
     </main>
   );
 }
