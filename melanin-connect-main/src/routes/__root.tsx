@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 import appCss from "@/styles.css?url";
 
 const description =
-  "Empower your business with AI-powered tools, seamless blockchain payment systems, and personalized solutions. Transform your digital operations with Melanin Connect.";
+  "Melanin Connect helps businesses automate operations, build intelligent digital products and modernise digital commerce with AI, automation and blockchain technology.";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -24,8 +24,8 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: site.name },
       { name: "description", content: description },
-      { name: "author", content: site.name },
-      { name: "theme-color", content: "#EC4899" },
+      { name: "author", content: site.legalName },
+      { name: "theme-color", content: "#1B1635" },
       { property: "og:site_name", content: site.name },
       { property: "og:type", content: "website" },
       { property: "og:image", content: `${site.url}/og-image.png` },
@@ -37,6 +37,8 @@ export const Route = createRootRoute({
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
+      { rel: "preconnect", href: "https://calendly.com" },
     ],
   }),
   shellComponent: RootDocument,
@@ -45,10 +47,14 @@ export const Route = createRootRoute({
   errorComponent: RouteError,
 });
 
+const revealScript = "document.documentElement.classList.add('js')";
+
 function RootDocument({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Marks the document as scripted before paint, enabling the scroll-reveal styles. */}
+        <script dangerouslySetInnerHTML={{ __html: revealScript }} />
         <HeadContent />
       </head>
       <body>
@@ -98,7 +104,7 @@ function RouteError({ error, reset }: ErrorComponentProps) {
       >
         Try again
       </button>
-      <Link to="/" className="btn-pill border border-gray-300 text-gray-900">
+      <Link to="/" className="btn-pill border border-gray-300 text-ink">
         Go home
       </Link>
     </StatusPage>
@@ -117,7 +123,7 @@ function StatusPage({
   return (
     <main className="flex min-h-screen items-center justify-center bg-white px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-4xl font-semibold tracking-tight text-gray-900">{title}</h1>
+        <h1 className="text-4xl font-semibold tracking-tight text-ink">{title}</h1>
         <p className="mt-3 text-sm text-gray-600">{message}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">{children}</div>
       </div>
