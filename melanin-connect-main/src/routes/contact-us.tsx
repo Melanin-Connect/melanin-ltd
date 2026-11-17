@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact-us")({
     pageHead({
       title: "Contact Us | Melanin Connect",
       description:
-        "Get in touch with Melanin Connect about AI and blockchain solutions for your business.",
+        "Talk to Melanin Connect about AI, automation, digital products and digital commerce for your business.",
       path: "/contact-us",
     }),
   component: ContactPage,
@@ -49,16 +49,16 @@ function ConnectionMolecule() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <circle cx="100" cy="100" r="28" fill="#000000" />
-      <circle cx="60" cy="100" r="24" fill="#4A4A4A" />
-      <circle cx="135" cy="65" r="20" fill="#EC4899" />
-      <circle cx="135" cy="135" r="20" fill="#EC4899" />
+      <circle cx="100" cy="100" r="28" fill="#1B1635" />
+      <circle cx="60" cy="100" r="24" fill="#2A2450" />
+      <circle cx="135" cy="65" r="20" fill="#F54E00" />
+      <circle cx="135" cy="135" r="20" fill="#F54E00" />
       <line
         x1="100"
         y1="100"
         x2="60"
         y2="100"
-        stroke="#555"
+        stroke="#2A2450"
         strokeWidth="8"
         strokeLinecap="round"
       />
@@ -67,7 +67,7 @@ function ConnectionMolecule() {
         y1="100"
         x2="135"
         y2="65"
-        stroke="#EC4899"
+        stroke="#F54E00"
         strokeWidth="8"
         strokeLinecap="round"
       />
@@ -76,7 +76,7 @@ function ConnectionMolecule() {
         y1="100"
         x2="135"
         y2="135"
-        stroke="#EC4899"
+        stroke="#F54E00"
         strokeWidth="8"
         strokeLinecap="round"
       />
