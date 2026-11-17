@@ -7,7 +7,7 @@ import { routeTree } from "@/routeTree.gen";
 describe("App routing", () => {
   const router = createRouter({ routeTree });
 
-  it.each(["/", "/about-us", "/services", "/contact-us", "/privacy"])(
+  it.each(["/", "/about-us", "/services", "/contact-us", "/privacy", "/book"])(
     "matches a page for %s",
     (path) => {
       const matches = router.matchRoutes(path);
