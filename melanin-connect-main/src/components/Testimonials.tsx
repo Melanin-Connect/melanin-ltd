@@ -65,7 +65,7 @@ export function Testimonials() {
             <p className="font-geist text-xs tracking-widest text-gray-500 uppercase">
               What clients say
             </p>
-            <h2 className="font-geist text-2xl font-medium tracking-tighter text-gray-900 sm:text-3xl md:text-4xl">
+            <h2 className="font-geist text-2xl font-medium tracking-tighter text-ink sm:text-3xl md:text-4xl">
               Testimonials
             </h2>
           </div>
@@ -110,8 +110,8 @@ function TestimonialCard({ name, role, quote, hidden }: Testimonial & { hidden: 
       className="mr-4 w-70 shrink-0 rounded-2xl border border-gray-200 bg-gray-50 p-5 sm:mr-5 sm:w-90 md:w-105"
     >
       <div className="flex items-center gap-1">
-        <span className="font-geist text-sm font-medium text-gray-900">{name}</span>
-        <VerifiedIcon className="h-3.5 w-3.5 text-pink-500" />
+        <span className="font-geist text-sm font-medium text-ink">{name}</span>
+        <VerifiedIcon className="h-3.5 w-3.5 text-brand" />
       </div>
       <p className="font-geist text-xs text-gray-500">{role}</p>
       <p className="mt-4 font-geist text-sm text-gray-700 sm:text-base">{quote}</p>
