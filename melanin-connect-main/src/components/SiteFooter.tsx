@@ -111,45 +111,44 @@ export function SiteFooter() {
               </div>
             </div>
 
-            <div className="mt-6 border-t border-white/10 sm:mt-8" />
-
-            <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-6">
-              <div>
-                <p className="font-geist text-xs text-white/60 sm:text-sm">About</p>
-                <div className="mt-2 grid grid-cols-2 gap-2 text-xs sm:mt-3 sm:text-sm">
-                  {navLinks.map(({ label, to }) => (
-                    <Link key={to} to={to} className={footerLink}>
+            <nav
+              aria-label="Footer"
+              className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 sm:mt-10 md:flex-row md:items-center md:justify-between"
+            >
+              <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                {navLinks.map(({ label, to }) => (
+                  <li key={to}>
+                    <Link to={to} className={footerLink}>
                       {label}
                     </Link>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="font-geist text-xs text-white/60 sm:text-sm">Useful Links</p>
-                <div className="mt-2 grid grid-cols-2 gap-2 text-xs sm:mt-3 sm:text-sm">
-                  <a
-                    href={site.appUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${footerLink} group inline-flex items-center gap-1`}
-                  >
-                    Melanin Connect App
-                    <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    <span className="sr-only">(opens in a new tab)</span>
-                  </a>
-                  <Link to="/privacy" className={footerLink}>
-                    Privacy Policy
-                  </Link>
-                  <Link to="/terms" className={footerLink}>
-                    Terms of Service
-                  </Link>
-                </div>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={site.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 font-geist text-sm font-medium tracking-tight text-white transition-colors hover:border-brand hover:text-brand"
+              >
+                Melanin Connect App
+                <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </nav>
+
+            <div className="mt-6 flex flex-col-reverse gap-3 border-t border-white/10 pt-6 font-geist text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+              <p>
+                © {new Date().getFullYear()} {site.legalName}. All rights reserved.
+              </p>
+              <div className="flex gap-6">
+                <Link to="/privacy" className="transition-colors hover:text-brand">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="transition-colors hover:text-brand">
+                  Terms of Service
+                </Link>
               </div>
             </div>
-
-            <p className="mt-4 px-2 text-center font-geist text-[10px] text-white/70 sm:mt-6 sm:text-xs">
-              © {new Date().getFullYear()} {site.legalName}. All rights reserved.
-            </p>
           </div>
         </div>
       </div>
