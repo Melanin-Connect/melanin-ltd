@@ -6,9 +6,9 @@ import { pageHead, site } from "@/lib/site";
 export const Route = createFileRoute("/contact-us")({
   head: () =>
     pageHead({
-      title: "Contact Us | Melanin Connect",
+      title: "Contact Us | Melanin Connect Ltd",
       description:
-        "Talk to Melanin Connect about AI, automation, digital products and digital commerce for your business.",
+        "Talk to Melanin Connect Ltd about AI, automation, digital products and digital commerce for your business.",
       path: "/contact-us",
     }),
   component: ContactPage,
