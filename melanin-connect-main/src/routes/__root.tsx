@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 import appCss from "@/styles.css?url";
 
 const description =
-  "Melanin Connect helps businesses automate operations, build intelligent digital products and modernise digital commerce with AI, automation and blockchain technology.";
+  "Melanin Connect Ltd helps businesses automate operations, build intelligent digital products and modernise digital commerce with AI, automation and blockchain technology.";
 
 export const Route = createRootRoute({
   head: () => ({
