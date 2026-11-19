@@ -126,13 +126,23 @@ export function SiteFooter() {
               </div>
               <div>
                 <p className="font-geist text-xs text-white/60 sm:text-sm">Useful Links</p>
-                <div className="mt-2 grid grid-cols-1 gap-2 text-xs sm:mt-3 sm:text-sm">
+                <div className="mt-2 grid grid-cols-2 gap-2 text-xs sm:mt-3 sm:text-sm">
+                  <a
+                    href={site.appUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${footerLink} group inline-flex items-center gap-1`}
+                  >
+                    Melanin Connect App
+                    <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <span className="sr-only">(opens in a new tab)</span>
+                  </a>
                   <Link to="/privacy" className={footerLink}>
                     Privacy Policy
                   </Link>
-                  <a href="/terms" className={footerLink}>
+                  <Link to="/terms" className={footerLink}>
                     Terms of Service
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
