@@ -49,7 +49,7 @@ export function ProblemsSection() {
           <div className="flex flex-col gap-5 rounded-3xl bg-ink p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
             <p className="max-w-2xl font-geist text-xl font-medium tracking-tight text-white sm:text-2xl">
               Once you identify the problem,{" "}
-              <span className="text-brand">Melanin Connect can build the solution.</span>
+              <span className="text-brand">Melanin Connect Ltd can build the solution.</span>
             </p>
             <BookLink topic="audit" className={`${button.primary} shrink-0`}>
               Get an AI audit
