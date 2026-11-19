@@ -15,9 +15,9 @@ import { images, pageHead } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () =>
     pageHead({
-      title: "Melanin Connect | Build Smarter. Automate Faster. Grow Digitally.",
+      title: "Melanin Connect Ltd | Build Smarter. Automate Faster. Grow Digitally.",
       description:
-        "Melanin Connect helps businesses transform operations and create scalable digital products using AI, automation and next-generation technology.",
+        "Melanin Connect Ltd helps businesses transform operations and create scalable digital products using AI, automation and next-generation technology.",
       path: "/",
     }),
   component: HomePage,
@@ -60,7 +60,7 @@ function HomePage() {
               className="mx-auto mt-6 max-w-2xl animate-character-reveal px-4 font-geist text-base text-pretty text-white/85 sm:mt-8 sm:text-lg md:text-xl"
               style={{ animationDelay: "1.4s" }}
             >
-              Melanin Connect helps businesses transform operations and create scalable digital
+              Melanin Connect Ltd helps businesses transform operations and create scalable digital
               products using AI, automation and next-generation technology.
             </p>
             <div className="animate-character-reveal" style={{ animationDelay: "1.6s" }}>
