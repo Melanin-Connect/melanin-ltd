@@ -13,9 +13,9 @@ import { button } from "@/lib/ui";
 export const Route = createFileRoute("/about-us")({
   head: () =>
     pageHead({
-      title: "About Us | Melanin Connect",
+      title: "About Us | Melanin Connect Ltd",
       description:
-        "Melanin Connect serves businesses connected to African and diaspora markets with AI, digital commerce and African and global market expertise.",
+        "Melanin Connect Ltd serves businesses connected to African and diaspora markets with AI, digital commerce and African and global market expertise.",
       path: "/about-us",
     }),
   component: AboutPage,
@@ -63,8 +63,8 @@ function AboutPage() {
             className="mx-auto mt-6 max-w-2xl animate-character-reveal font-geist text-base leading-relaxed text-pretty text-gray-600 sm:text-lg"
             style={{ animationDelay: "0.3s" }}
           >
-            Melanin Connect serves businesses connected to African markets and diaspora markets. We
-            help them automate operations, build digital products and modernise digital commerce.
+            Melanin Connect Ltd serves businesses connected to African markets and diaspora markets.
+            We help them automate operations, build digital products and modernise digital commerce.
           </p>
           <ul
             className="mt-10 flex animate-character-reveal flex-wrap items-center justify-center gap-2 sm:gap-3"
@@ -100,7 +100,7 @@ function AboutPage() {
           <Question number="02" question="What problem do you solve?">
             <p>
               We help businesses automate operations, build digital products and modernise digital
-              commerce. Once you identify the problem, Melanin Connect can build the solution.
+              commerce. Once you identify the problem, Melanin Connect Ltd can build the solution.
             </p>
             <ol className="mt-6 flex flex-wrap items-center gap-2">
               {productPath.map((stage, index) => (
@@ -161,8 +161,9 @@ function AboutPage() {
                 <span className="text-brand">digital transformation worldwide.</span>
               </p>
               <p className="mt-6 font-geist text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl">
-                Melanin Connect serves businesses connected to African markets and diaspora markets,
-                bringing together AI, digital commerce and African and global market expertise.
+                Melanin Connect Ltd serves businesses connected to African markets and diaspora
+                markets, bringing together AI, digital commerce and African and global market
+                expertise.
               </p>
               <p className="mt-4 font-geist text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl">
                 We empower businesses to focus on growth while we deliver sustainable results
