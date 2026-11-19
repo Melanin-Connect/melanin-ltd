@@ -14,7 +14,7 @@ import { images, pageHead } from "@/lib/site";
 export const Route = createFileRoute("/services")({
   head: () =>
     pageHead({
-      title: "Services | Melanin Connect",
+      title: "Services | Melanin Connect Ltd",
       description:
         "AI and automation, digital products, digital commerce and blockchain solutions that help businesses lower costs and grow.",
       path: "/services",
@@ -72,7 +72,7 @@ function ServicesPage() {
               className="mx-auto mt-5 max-w-2xl animate-character-reveal px-4 font-geist text-base text-pretty text-white/85 sm:mt-6 sm:text-lg"
               style={{ animationDelay: "0.3s" }}
             >
-              Melanin Connect helps businesses automate operations, build intelligent digital
+              Melanin Connect Ltd helps businesses automate operations, build intelligent digital
               products and modernise digital commerce with AI, automation and blockchain technology.
             </p>
             <div className="animate-character-reveal" style={{ animationDelay: "0.45s" }}>
