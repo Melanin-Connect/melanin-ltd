@@ -1,11 +1,13 @@
 export const site = {
-  name: "Melanin Connect",
+  name: "Melanin Connect Ltd",
   legalName: "Melanin Connect Ltd",
   url: "https://melaninconnect.xyz",
+  /** Melanin Connect App, our product. Linked from the footer and opened in a new tab. */
+  appUrl: "https://www.melaninconnect.app/",
   email: "info@melaninconnect.xyz",
   phone: "+233503659567",
   workHours: "Monday to Friday: 09:00 am – 05:00 pm",
-  address: "71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ",
+  address: "47 Hill Street, Newtown, Accra, Ghana",
   tagline: "Build Smarter. Automate Faster. Grow Digitally.",
 } as const;
 
