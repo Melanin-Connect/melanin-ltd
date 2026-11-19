@@ -5,7 +5,7 @@ import { CheckIcon, MailIcon, PhoneIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 import { button } from "@/lib/ui";
 
-/** Calendly colours (hex without #) so the scheduler matches the Melanin Connect brand. */
+/** Calendly colours (hex without #) so the scheduler matches the Melanin Connect Ltd brand. */
 const BRAND_COLORS = { background_color: "ffffff", text_color: "1b1635", primary_color: "f54e00" };
 
 type Status = "loading" | "ready" | "scheduled";
