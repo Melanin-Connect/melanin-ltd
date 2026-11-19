@@ -123,8 +123,8 @@ function TermsPage() {
       <LegalSection title="11. Governing Law">
         <p>
           These terms and conditions are governed by and construed in accordance with the laws of
-          the United Kingdom and you irrevocably submit to the exclusive jurisdiction of the courts
-          in that location.
+          the Republic of Ghana and you irrevocably submit to the exclusive jurisdiction of the
+          courts of Ghana.
         </p>
       </LegalSection>
 
