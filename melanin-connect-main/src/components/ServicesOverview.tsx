@@ -68,8 +68,8 @@ export function ServicesOverview() {
           }
         >
           <p>
-            Melanin Connect is a digital technology company helping businesses use AI, automation
-            and blockchain to improve operations, digital commerce and growth.
+            Melanin Connect Ltd is a digital technology company helping businesses use AI,
+            automation and blockchain to improve operations, digital commerce and growth.
           </p>
         </SectionHeading>
 
