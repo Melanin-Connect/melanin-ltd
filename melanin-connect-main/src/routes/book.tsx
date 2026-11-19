@@ -13,9 +13,9 @@ export const Route = createFileRoute("/book")({
     isTopic(search["topic"]) ? { topic: search["topic"] } : {},
   head: () =>
     pageHead({
-      title: "Book a Consultation | Melanin Connect",
+      title: "Book a Consultation | Melanin Connect Ltd",
       description:
-        "Schedule a consultation, start a project or book an AI audit with the Melanin Connect team.",
+        "Schedule a consultation, start a project or book an AI audit with the Melanin Connect Ltd team.",
       path: "/book",
     }),
   component: BookPage,
