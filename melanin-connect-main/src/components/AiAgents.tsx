@@ -57,7 +57,7 @@ export function AiAgents() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading
-              eyebrow="Melanin Connect AI agents"
+              eyebrow="Melanin Connect Ltd AI agents"
               title="AI agents that work alongside your team"
             >
               <p>
