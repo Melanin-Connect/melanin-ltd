@@ -6,8 +6,10 @@ export const site = {
   appUrl: "https://www.melaninconnect.app/",
   email: "info@melaninconnect.xyz",
   phone: "+233503659567",
-  workHours: "Monday to Friday: 09:00 am – 05:00 pm",
+  workHours: "Monday to Friday: 010:00 am – 05:30. pm",
   address: "47 Hill Street, Newtown, Accra, Ghana",
+  /** Google Maps link for the address. Opens in a new tab. */
+  mapUrl: "https://maps.app.goo.gl/HV299rEskbTZ2AzA6",
   tagline: "Build Smarter. Automate Faster. Grow Digitally.",
 } as const;
 

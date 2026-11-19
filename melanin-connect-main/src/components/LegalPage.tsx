@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { MailIcon, MapPinIcon } from "@/components/icons";
+import { ArrowUpRightIcon, MailIcon, MapPinIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 /** Shared layout for the Privacy Policy and Terms of Service pages. */
@@ -76,7 +76,18 @@ export function LegalContact() {
         </span>
         <div>
           <p className="text-sm font-semibold text-ink">Address</p>
-          <address className="text-gray-700 not-italic">{site.address}</address>
+          <address className="not-italic">
+            <a
+              href={site.mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group text-gray-700 underline-offset-4 hover:text-brand hover:underline"
+            >
+              {site.address}
+              <ArrowUpRightIcon className="ml-1 inline-block h-3.5 w-3.5 align-[-0.1em] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <span className="sr-only">(opens Google Maps in a new tab)</span>
+            </a>
+          </address>
         </div>
       </div>
     </div>
