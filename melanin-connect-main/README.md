@@ -1,6 +1,6 @@
-# Melanin Connect
+# Melanin Connect Ltd
 
-Marketing website for [Melanin Connect](https://melaninconnect.xyz/): AI and blockchain solutions for business growth.
+Marketing website for [Melanin Connect Ltd](https://melaninconnect.xyz/): AI and blockchain solutions for business growth.
 
 ## Stack
 
@@ -40,7 +40,7 @@ public/
 src/
   components/        Header, footer, page sections and icons
   lib/site.ts        Contact details, navigation links, image paths, page <head> helper
-  routes/            One file per page (/, /about-us, /services, /contact-us, /privacy, /book)
+  routes/            One file per page (/, /about-us, /services, /contact-us, /privacy, /terms, /book)
   styles.css         Tailwind entry: brand tokens, animations and base styles
 ```
 
